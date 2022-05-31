@@ -11,21 +11,6 @@ namespace Person.WebApi.Controllers
     public class PersonController : ControllerBase
     {
 
-
-        // GET: api/<PersonController>
-        //[HttpGet]
-        //public List<Person.DB.Person> Get()
-        //{
-        //    var PersonDb = new PersonDBContext();
-        //    var PersonList = PersonDb.People.ToList();
-        //     return (PersonList);
-
-        //    //return new string[] { "value1", "value2" };
-
-        //}
-
-
-
         [HttpGet]
         public ActionResult<List<Person.DB.Person>> Get()
         {
