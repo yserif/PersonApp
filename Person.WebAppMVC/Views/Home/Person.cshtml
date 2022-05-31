@@ -1,0 +1,29 @@
+﻿@using Person.DB
+@{
+    ViewData["Title"] = "Person";
+    var people = Model as List<Person>;
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Person List</p>
+<table class="table table-striped">
+    <thead>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>PHONE</th>
+    <th>ADDRESS</th>
+    </thead>
+    @foreach (var person in people)
+    {
+        <tr>
+
+            <td class="col-md-2">  @person.Id </td>
+            <td class="col-md-3">  @person.Name </td>
+            <td class="col-md-2">  @person.Age</td>
+            <td class="col-md-3">  @person.Phone </td>
+            <td class="col-md-3">  @person.Address </td>
+
+        </tr>
+    }
+</table>
